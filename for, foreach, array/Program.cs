@@ -1,6 +1,13 @@
-﻿static void SayGoodbye()
+﻿static string GetHint(int distance)
 {
-    Console.WriteLine("Программа завершена!");
+    if (distance <= 3)
+        return "Очень горячо";
+    else if (distance <= 7)
+        return "Горячо";
+    else if (distance <= 15)
+        return "Тепло";
+    else
+        return "Холодно";
 }
 
-SayGoodbye();
+
