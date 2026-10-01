@@ -1,10 +1,17 @@
-﻿for (int i = 0; i < 11; i++)
-{
-    Console.WriteLine(i);
-}
-
-string[] cities = { "Варшава", "Москва", "Берлин", "Париж" };
+﻿string[] cities = { "Варшава", "Москва", "Берлин", "Париж" };
 foreach (string city in cities)
 {
-    Console.WriteLine($"City {city}");
+    if (city.Length > 6)
+    {
+        Console.WriteLine(city);
+    }
+}
+
+
+
+
+
+for (int i = 0; i < cities.Length; i++)
+{
+    Console.WriteLine($"{cities[i]}");
 }
