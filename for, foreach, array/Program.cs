@@ -1,17 +1,6 @@
-﻿string[] cities = { "Варшава", "Москва", "Берлин", "Париж" };
-foreach (string city in cities)
+﻿static void SayGoodbye()
 {
-    if (city.Length > 6)
-    {
-        Console.WriteLine(city);
-    }
+    Console.WriteLine("Программа завершена!");
 }
 
-
-
-
-
-for (int i = 0; i < cities.Length; i++)
-{
-    Console.WriteLine($"{cities[i]}");
-}
+SayGoodbye();
