@@ -1,17 +1,8 @@
-﻿string[] numbers = { "10", "25", "3", "100", "7" };
-foreach (string number in numbers)
+﻿int[] numbers = { 4, 7, 2, 9, 5 };
+for (int i = 0; i<numbers.Length; i++)
 {
-    Console.WriteLine(number);
-}
-for (int i = 0; i < numbers.Length; i++)
-{
-    Console.WriteLine(numbers[i]);
-}
-
-static int Double(int number)
-{
-
-    return number * 2;
-}
-
-int result = Double(3);
+    if (numbers[i] > 5)
+    {
+        Console.WriteLine(numbers[i]);
+    }
+}    
