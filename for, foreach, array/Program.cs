@@ -1,8 +1,18 @@
-﻿int[] numbers = { 4, 7, 2, 9, 5 };
-for (int i = 0; i<numbers.Length; i++)
+﻿string[] products = { "Keyboard", "Mouse", "Monitor", "Headphones", "Webcam" };
+int[] prices = { 80, 40, 350, 120, 60 };
+
+
+static int GetTotal(int[] prices)
 {
-    if (numbers[i] > 5)
+    int total = 0;
+    for (int i = 0; i < prices.Length; i++)
     {
-        Console.WriteLine(numbers[i]);
+        total += prices[i];
     }
-}    
+
+    return total;
+}
+
+int total = GetTotal(prices);
+Console.WriteLine(total);
+
