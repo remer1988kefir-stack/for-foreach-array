@@ -1,18 +1,15 @@
-﻿string[] products = { "Keyboard", "Mouse", "Monitor", "Headphones", "Webcam" };
-int[] prices = { 80, 40, 350, 120, 60 };
-
-
-static int GetTotal(int[] prices)
+﻿int[] numbers = { 10, 20, 30, 40, 50 };
+static int GetMax(int[] numbers)
 {
-    int total = 0;
-    for (int i = 0; i < prices.Length; i++)
+    int max = numbers[0];
+    foreach (int number in numbers)
     {
-        total += prices[i];
+        if (number > max)
+        {
+            max = number;
+        }
+
     }
-
-    return total;
+    return max;
 }
-
-int total = GetTotal(prices);
-Console.WriteLine(total);
-
+Console.WriteLine(GetMax(numbers));
