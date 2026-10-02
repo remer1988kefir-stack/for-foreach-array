@@ -1,40 +1,69 @@
-﻿int[] scores = { 45, 78, 92, 61, 35, 88, 100, 54 };
-static int GetMax(int[] scores)
+﻿string[] products = { "Keyboard", "Mouse", "Monitor", "Headphones", "Webcam" };
+int[] prices = { 80, 40, 350, 120, 60 };
+
+
+for (int i = 0; i < products.Length; i++)
 {
-    int max = scores[0];
-    foreach (int score in scores)
-        if (score > max)
-        {  max = score; }
-    return max;
+    Console.WriteLine($"{products[i]} - {prices[i]}");
 }
 
-static int GetAverage(int[] scores)
+static bool IsExpensive(int price)
+{
+    return price > 100;
+}
+for (int i = 0; i < products.Length; i++)
+{
+    if (IsExpensive(prices[i]))
+    {
+        Console.WriteLine($"{products[i]} - {prices[i]}");
+    }
+}
+static int GetMax(int[] prices)
+{
+        int max = prices[0];
+
+    foreach (int price in prices)
+    {
+        if (price > max)
+        {
+            max = price;
+        }
+    }
+    return max;
+}
+static int GetAverage(int[] prices)
 {
     int average = 0;
     int sum = 0;
-    for (int i = 0; i < scores.Length; i++)
+    for (int i = 0; i < prices.Length; i++)
     {
-        sum += scores[i];
+        sum += prices[i];
     }
-    average = sum / scores.Length;
+    average = sum / prices.Length;
     return average;
 }
-static void PrintExcellentScores(int[] scores)
+static int GetTotal(int[] prices)
 {
-    foreach (int score in scores)
+    int total = 0;
+    for (int i = 0;i < prices.Length;i++)
     {
-        if (score >= 90)
-        {
-            Console.WriteLine(score);
-        }
+        total += prices[i];
     }
+    return total;
 }
 
 
-int max = GetMax(scores);
-int average = GetAverage(scores);
+int max = GetMax(prices);
+int average = GetAverage(prices);
+int total = GetTotal(prices);
 
-Console.WriteLine($"Максимальная оценка {max}");
-Console.WriteLine($"Средняя оценка {average}");
-Console.WriteLine("Отличные оценки: ");
-PrintExcellentScores(scores);
+for (int i = 0;i < prices.Length;i++)
+{
+    if (prices[i] == max)
+    {
+        Console.WriteLine($"{products[i]} - {max}");
+    }
+}
+Console.WriteLine($"Среднее значение: {average}");
+Console.WriteLine($"Сумма: {total}");
+
