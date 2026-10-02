@@ -1,13 +1,17 @@
-﻿static string GetHint(int distance)
+﻿string[] numbers = { "10", "25", "3", "100", "7" };
+foreach (string number in numbers)
 {
-    if (distance <= 3)
-        return "Очень горячо";
-    else if (distance <= 7)
-        return "Горячо";
-    else if (distance <= 15)
-        return "Тепло";
-    else
-        return "Холодно";
+    Console.WriteLine(number);
+}
+for (int i = 0; i < numbers.Length; i++)
+{
+    Console.WriteLine(numbers[i]);
 }
 
+static int Double(int number)
+{
 
+    return number * 2;
+}
+
+int result = Double(3);
